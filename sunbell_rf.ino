@@ -11,14 +11,14 @@
 * 10 channel 4 up
 * 11 channel 4 down
 * 12 channel 4 stop
-*
+* 13 channel 1 automatic up
 */
 
 
 #define RF_TX 2
 #define RESEND 10
 
-#include "C:\Users\Dario\Documents\Saleae\custom_rf.h"
+#include "custom_rf_auto.h"
 
 int i,j=1;
 
@@ -34,10 +34,10 @@ void loop() {
     rfsend(j);
   }
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
+  delay(3000);
   digitalWrite(LED_BUILTIN, LOW);
-  if(j>11)
+  if(j>1)
     j=1;
   else
-    j++;
+    j=2;
 }
