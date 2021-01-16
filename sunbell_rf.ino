@@ -1,43 +1,57 @@
 /* rfsend(n)
-* 1 channel 1 up
-* 2 channel 1 down
-* 3 channel 1 stop
-* 4 channel 2 up
-* 5 channel 2 down
-* 6 channel 2 stop
-* 7 channel 3 up
-* 8 channel 3 down
-* 9 channel 3 stop
-* 10 channel 4 up
-* 11 channel 4 down
-* 12 channel 4 stop
-* 13 channel 1 automatic up
+* N   MEANING
+* 1   channel 1 automatic-up
+* 2   channel 1 automatic-down
+* 3   channel 1 fine-up
+* 4   channel 1 fine-down
+* 5   channel 1 stop
+* 6   channel 2 automatic-up
+* 7   channel 2 automatic-down
+* 8   channel 2 fine-up
+* 9   channel 2 fine-down
+* 10  channel 2 stop
+* 11  channel 3 automatic-up
+* 12  channel 3 automatic-down
+* 13  channel 3 fine-up
+* 14  channel 3 fine-down
+* 15  channel 3 stop
+* 16  channel 4 automatic-up
+* 17  channel 4 automatic-down
+* 18  channel 4 fine-up
+* 19  channel 4 fine-down
+* 20  channel 4 stop
 */
 
-
+//define rf transmitter pin
 #define RF_TX 2
-#define RESEND 10
 
-#include "custom_rf_auto.h"
+//define needed channels
+#define RF_CHANNEL1
+#define RF_CHANNEL2
+#define RF_CHANNEL3
+#define RF_CHANNEL4
 
-int i,j=1;
+//define if you need only automatic up/down
+#define RF_MINIMAL
+
+//include the library
+#include "custom_rf_complete.h"
+
+#define RESEND 20
 
 void setup() {
-  // put your setup code here, to run once:
+  //set rf transmitter pin as output
   pinMode(RF_TX, OUTPUT);
+  //led go brrrr
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  for(i=0; i<RESEND;i++){
-    rfsend(j);
+  //will send the code RESEND times (original 5)
+  for(int i=0; i<RESEND;i++){
+    rfsend(2); //channel 1 down!!!
   }
   digitalWrite(LED_BUILTIN, HIGH);
   delay(3000);
   digitalWrite(LED_BUILTIN, LOW);
-  if(j>1)
-    j=1;
-  else
-    j=2;
 }

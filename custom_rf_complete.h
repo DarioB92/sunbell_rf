@@ -1,7 +1,7 @@
 void rfsend(int command){
     switch (command)
     {
-        
+        #ifdef RF_CHANNEL1
         case 1:
         // 1 all-up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -138,8 +138,9 @@ void rfsend(int command){
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
 
+        #ifndef RF_MINIMAL
         case 3:  
-        // 1 up
+        // 1 fine up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         digitalWrite(RF_TX, LOW);	delayMicroseconds(1552);
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(1457);
@@ -343,7 +344,10 @@ void rfsend(int command){
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(395);
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
+        #endif
+        #endif
 
+        #ifdef RF_CHANNEL2
         case 6:
         // 2 all-up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -480,6 +484,7 @@ void rfsend(int command){
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
 
+        #ifndef RF_MINIMAL
         case 8:
         // 2 up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -683,7 +688,10 @@ void rfsend(int command){
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(446);
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
+        #endif
+        #endif
 
+        #ifdef RF_CHANNEL3
         case 11:
         // 3 all-up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -820,6 +828,7 @@ void rfsend(int command){
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
 
+        #ifndef RF_MINIMAL
         case 13:
         // 3 up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -1025,7 +1034,10 @@ void rfsend(int command){
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(445);
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
+        #endif
+        #endif
 
+        #ifdef RF_CHANNEL4
         case 16:
         // 4 all-up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -1162,7 +1174,7 @@ void rfsend(int command){
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
 
-
+        #ifndef RF_MINIMAL
         case 18:
         // 4 up
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
@@ -1366,6 +1378,8 @@ void rfsend(int command){
         digitalWrite(RF_TX, HIGH);	delayMicroseconds(411);
         digitalWrite(RF_TX, LOW);	delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);    delayMicroseconds(5000);
         break;
+        #endif
+        #endif
 
     }//end switch
 }//end rfsend()
