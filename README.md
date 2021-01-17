@@ -2,9 +2,9 @@
 
 I have 4 Sunbell curtrains, and want to integrate they in my domotic system. 
 They works on 433Mhz.
-![](multisample)
+![](https://bitbucket.org/dariobocc/sunbell_rf/src/master/images/multisample.jpg)
 Logic samples show this kind of encoding, I suppose Manchester.
-![](singlesample)
+![](https://bitbucket.org/dariobocc/sunbell_rf/src/master/images/singleframe.jpg)
 Message is probably made up by :
 
 ||||||
@@ -49,7 +49,7 @@ define the channel needed	#define CHANNELx
  |20|  channel 4 stop
 
 
-##Example
+## Example
 ```c
 //define rf transmitter pin
 #define RF_TX 2
@@ -86,7 +86,7 @@ void loop() {
 }
 ```
 
-###FAQ
+### FAQ
 1) Can I use for... Sure
 2) Will work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel. 
 n.b. this will exclude your remote
