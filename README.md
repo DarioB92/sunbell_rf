@@ -23,7 +23,7 @@ stop: will sto automatic up or automatic down.
 |-----------------|---------------|  
 | define RF_TX pin	| #define RX_TX 2 |  
 | define the channel needed	|  #define CHANNELx |  
-| (optional) define | #RF_MINIMAL to use only automatic up/down |
+| (optional)to compile only automatic up/down | #define RF_MINIMAL | 
 
 #rfsend(n)
 
@@ -89,8 +89,8 @@ void loop() {
 ```
 
 ### FAQ
-1) Can I use for... Sure
-2) Will work on my curtrains?
+1) Can I use for... Sure  
+2) Will work on my curtrains?  
 3) Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote
   
   To Radaelli, I'm really impressed, the quality of the PCB it's astonishing!
