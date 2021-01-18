@@ -25,7 +25,7 @@ stop: will sto automatic up or automatic down.
 | define the channel needed	|  #define CHANNELx |  
 | (optional)to compile only automatic up/down | #define RF_MINIMAL | 
 
-#rfsend(n)
+# rfsend(n)
 
 |n |  MEANING
 | ------------ | ------------ |
