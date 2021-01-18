@@ -15,9 +15,9 @@ After some attempts I decided to simply retransmit the sampled signal.
 I sampled, for each of the 4 channels:  
 automatic up: will open the curtrain  
 automatic down: will close the curtrain  
-fine up: while pressed will slowly open the curtrain, or regulate inclination  
-fine down: while pressed will slowly close the curtrain, or regulate inclination  
-stop: will sto automatic up or automatic down. 
+fine up: while sent will slowly open the curtrain, or regulate inclination  
+fine down: while sent will slowly close the curtrain, or regulate inclination  
+stop: will stop automatic up or automatic down. 
 
 | To use the library it's needed to |  
 |-----------------|---------------|  
@@ -90,7 +90,6 @@ void loop() {
 
 ### FAQ
 1) Can I use for... Sure  
-2) Will work on my curtrains?  
-3) Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote
+2) Will work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote
   
   To Radaelli, I'm really impressed, the quality of the PCB it's astonishing!
