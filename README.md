@@ -1,6 +1,6 @@
 # RF library for SunBell Curtrains
 
-I have 4 Sunbell curtrains, and want to integrate they in my domotic system. 
+I have 4 Sunbell curtrains, and want to integrate them in my domotic system. 
 They works on 433Mhz.
 ![](images/multisample.jpg)
 Logic samples show this kind of encoding, I suppose Manchester.
@@ -11,17 +11,18 @@ Message is probably made up by :
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | Preamble | Transmitter address or sync | Target Id | Command | Checksum | 
 
-After some attempts I decided to simply retransmit the sampled signal.
-I sampled, for each of the 4 channels:
-automatic up: will open the curtrain
-automatic down: will close the curtrain
-fine up: while pressed will slowly open the curtrain, or regulate inclination
-fine down: while pressed will slowly close the curtrain, or regulate inclination
-stop: will sto automatic up or automatic down.
-to use the library it's needed to 
-define RF_TX pin					#define RX_TX 2
-define the channel needed	#define CHANNELx
-(optional) define #RF_MINIMAL to use only automatic up/down
+After some attempts I decided to simply retransmit the sampled signal. 
+I sampled, for each of the 4 channels:  
+automatic up: will open the curtrain  
+automatic down: will close the curtrain  
+fine up: while pressed will slowly open the curtrain, or regulate inclination  
+fine down: while pressed will slowly close the curtrain, or regulate inclination  
+stop: will sto automatic up or automatic down.  
+|To use the library it's needed to||
+|-----------------|---------------|   
+|define RF_TX pin	| #define RX_TX 2|  
+|define the channel needed	| #define CHANNELx|  
+|(optional) define | #RF_MINIMAL to use only automatic up/down|
 
 #rfsend(n)
 
@@ -88,5 +89,7 @@ void loop() {
 
 ### FAQ
 1) Can I use for... Sure
-2) Will work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel. 
-n.b. this will exclude your remote
+2) Will work on my curtrains?
+3) Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote
+  
+  To Radaelli, I'm really impressed, the quality of the PCB it's astonishing!
