@@ -17,12 +17,13 @@ automatic up: will open the curtrain
 automatic down: will close the curtrain  
 fine up: while pressed will slowly open the curtrain, or regulate inclination  
 fine down: while pressed will slowly close the curtrain, or regulate inclination  
-stop: will sto automatic up or automatic down.  
-|To use the library it's needed to||
-|-----------------|---------------|   
-|define RF_TX pin	| #define RX_TX 2|  
-|define the channel needed	| #define CHANNELx|  
-|(optional) define | #RF_MINIMAL to use only automatic up/down|
+stop: will sto automatic up or automatic down. 
+
+| To use the library it's needed to |  
+|-----------------|---------------|  
+| define RF_TX pin	| #define RX_TX 2 |  
+| define the channel needed	|  #define CHANNELx |  
+| (optional) define | #RF_MINIMAL to use only automatic up/down |
 
 #rfsend(n)
 
