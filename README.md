@@ -1,9 +1,9 @@
 # RF library for SunBell Curtrains
 
-I have 4 Sunbell curtains, that work on 433Mhz and I want tointegrate them in my domotic system.
-![](images/multisample.jpg)
-The logic samples show this kind of encoding, which I suppose to be Manchester.
-![](images/singleframe.jpg)
+I have 4 Sunbell curtains, that work on 433Mhz and I want tointegrate them in my domotic system.  
+![](images/multisample.jpg)  
+The logic samples show this kind of encoding, which I suppose to be Manchester.  
+![](images/singleframe.jpg)  
 Probably the message is composed by:  
 
 ||||||  
