@@ -1,25 +1,27 @@
 # RF library for SunBell Curtrains
+
 I have 4 Sunbell curtains, that work on 433Mhz and I want tointegrate them in my domotic system.
 ![](images/multisample.jpg)
 The logic samples show this kind of encoding, which I suppose to be Manchester.
 ![](images/singleframe.jpg)
-Probably the message is composed by:
-||||||
-| ------------ | ------------ | ------------ | ------------ | ------------ |
+Probably the message is composed by:  
+
+||||||  
+| ------------ | ------------ | ------------ | ------------ | ------------ |  
 | Preamble | Transmitter address or sync | Target Id | Command | Checksum |
 
-After some attemps i decided ******************* to simply retransmit the sampled signal.
-The sampled signal I used for each of the 4 channels is:
+After some decoding attemps, i decided to simply retransmit the sampled signal.  
+The sampled signal I used for each of the 4 channels is:  
 automatic up: will open the curtrain  
 automatic down: will close the curtrain  
 fine up: while sent will slowly open the curtrain, or regulate inclination  
 fine down: while sent will slowly close the curtrain, or regulate inclination  
-stop: will stop automatic up or automatic down.
+stop: will stop automatic up or automatic down.  
 
-So, to use this library we’ve to:
+| To use the library it's needed to |  
 |-----------------|---------------|  
-| define RF_TX pin	| #define RX_TX 2 |  
-| define the channel needed	|  #define CHANNELx |  
+| define RF_TX pin  | #define RX_TX 2 |  
+| define the channel needed  |  #define CHANNELx |  
 | (optional)to compile only automatic up/down | #define RF_MINIMAL | 
 
 # rfsend(n)
@@ -86,6 +88,7 @@ void loop() {
 ```
 ### FAQ
 1) Can I use for... Sure  
-2) Will it work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote
-  
+2) Will it work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote  
+3) But I want to use my remote!!! Ok, you can, sample your remote. You can convert .csv file to arduino code importing it in excelmodule.xlsx
+
   To Radaelli, I'm really impressed, the quality of the PCB it's astonishing! 
