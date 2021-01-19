@@ -11,7 +11,7 @@ Probably the message is composed by:
 | Preamble | Transmitter address or sync | Target Id | Command | Checksum |
 
 After some decoding attemps, i decided to simply retransmit the sampled signal.  
-The sampled signal I used for each of the 4 channels is:  
+The sampled signal I used for each of the 4 channels is:   
 automatic up: will open the curtrain  
 automatic down: will close the curtrain  
 fine up: while sent will slowly open the curtrain, or regulate inclination  
