@@ -18,7 +18,7 @@ fine up: while sent will slowly open the curtrain, or regulate inclination
 fine down: while sent will slowly close the curtrain, or regulate inclination  
 stop: will stop automatic up or automatic down.  
 
-| To use the library it's needed to |   
+| To use the library it's needed to ||   
 |-----------------|---------------|  
 | define RF_TX pin  | #define RX_TX 2 |  
 | define the channel needed  |  #define CHANNELx |  
