@@ -91,4 +91,8 @@ void loop() {
 2) Will it work on my curtrains? Yes, push both buttons on the reciever and send a command for the choosen channel.   N.B. this will exclude your remote  
 3) But I want to use my remote!!! Ok, you can, sample your remote. You can convert .csv file to arduino code importing it in excelmodule.xlsx
 
+### Possible improvements
+1) Decode  
+2) Using the same lenght delay instead of sampled signal (ex. 450us instead of 438us and 440us and...)
+
   To Radaelli, I'm really impressed, the quality of the PCB it's astonishing! 
